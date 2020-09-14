@@ -18,8 +18,6 @@ Le script log.js prévoit les commandes sauvegradant les réponses récentes aux
     - index.html
 - CSS
     - index.css
-- Templates
-    - log_line.php
 - JS
     - log.js
     - test.js
