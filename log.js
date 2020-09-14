@@ -12,25 +12,40 @@ function log_push(calc, res) {
 }
 
 function log_line_disp(log_line, log_var) {
-    let labels = log_line.children;
+    let items = log_line.children;
 
-    labels[0].innerText = "Étage " + log_var[2];
-    labels[1].innerText = calcToStr(log_var[0]);
-    labels[2].innerText = log_var[1];
+    items[0].innerText = "Étage " + log_var[2];
+    items[1].innerText = calcToStr(log_var[0]);
+    items[2].innerText = log_var[1];
 
     let correct = log_var[0].res == log_var[1];
-    labels[3].innerText = correct;
 
     if (correct)
-        labels[3].style.backgroundColor  = "#9df589";
+        items[2].style.backgroundColor  = "#9df589";
     else
-        labels[3].style.backgroundColor = "#ff6257";
+        items[2].style.backgroundColor = "#ec5f55";
 }
 
 function log_disp() {
-    let log_lines = document.getElementsByClassName("log-line");
+    let log_table = document.querySelector("tbody");
+
+    if (log_table == null) {
+        document.querySelector("#log").appendChild(document.createElement("tbody"));
+        return;
+    }
+
+    if (log_table.children.length < 10) {
+        let child = document.createElement("tr");
+        child.appendChild(document.createElement("td"));
+        child.appendChild(document.createElement("td"));
+        child.appendChild(document.createElement("td"));
+
+        log_table.appendChild(child);
+    }
+
+    let lines = log_table.children;
 
     for (let i = 0; i < log.length; i++) {
-        log_line_disp(log_lines[i], log[i]);
+        log_line_disp(lines[i], log[i]);
     }
 }

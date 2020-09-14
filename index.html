@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="index.css">
+    <title>Tower</title>
+</head>
+
+<header>
+    <div id="stage">
+        <label>Étage  </label>
+        <label id="stage-num">0</label>
+    </div>
+
+    <div id="start">
+        <label id="countdown">5</label>
+        <button id="start-button">Start</button>
+    </div>
+
+    <form>
+        <label id="calc"></label><br>
+        <input id="result" type="number"><br>
+        <button id="submit">Submit</button>
+    </form>
+
+    <div id="timer">
+        <label id="timer-countdown">5</label>
+    </div>
+</header>
+
+<body>
+    <table id="log">
+        <thead>
+            <tr>
+                <td>Log</td>
+                <td>Calcul</td>
+                <td>Réponse</td>
+            </tr>
+        </thead>
+    </table>
+
+</body>
+
+<footer>
+    <button id="stop">Stop</button>
+</footer>
+</html>
+
+<script src="log.js"></script>
+<script src="test.js"></script>

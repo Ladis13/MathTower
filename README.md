@@ -15,7 +15,7 @@ Le script log.js prévoit les commandes sauvegradant les réponses récentes aux
 ## Liste du code
 
 - HTML
-    - index.php
+    - index.html
 - CSS
     - index.css
 - Templates

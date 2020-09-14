@@ -1,5 +1,34 @@
 #CHANGELOG
 
+## 0.1.2 Beta
+
+### Fichiers
+
+Nouveaux :
+
+    - index.html
+    
+Supprimés :
+
+    - index.php
+    - log_line.php
+    
+### Code
+
+index.html remplace index.php, le php n'était pas nécéssaire pour le moment, et l'affichage est mieux avec table. Ajout d'un bouton stop pour faire une pause.
+
+log.js change également, maintenant il crée des lignes de tableaux.
+
+test.js possède un bouton de démarage qui lance un décompte puis disparaît à la fin. Fonction init() qui se déclenche à la fin du fichier, elle permet de remettre le compteur start à 5. Ajout d'un handler pour le bouton stop, celui ci active la fonction init() et affiche le bouton start et la barre, et fait disparaître le bouton stop et le calcul. Ajout d'un second timer, qui en cas de réponse trop longue fait un nouveau calcul en faisant descendre d'un étage.
+
+### TO-DO
+
+Empeche le spam du bouton stop pour "choisir" son calcul
+
+Faire le système de difficulté croissante
+
+
+
 ## 0.1 Beta
 
 ### Fichiers
